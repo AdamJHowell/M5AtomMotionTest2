@@ -188,20 +188,24 @@ void loop()
       if( azimuthSpeed == 2500 )
       {
          azimuthSpeed = 1500;
+         altitudeSpeed = 1500;
          incrementing = false;
       }
       else if( azimuthSpeed == 500 )
       {
          azimuthSpeed = 1500;
+         altitudeSpeed = 1500;
          incrementing = true;
       }
       if( incrementing )
       {
          azimuthSpeed += 10;
+         altitudeSpeed += 2;
       }
       else
       {
          azimuthSpeed -= 10;
+         altitudeSpeed -= 2;
       }
       lastServoLoop = millis();
    }
